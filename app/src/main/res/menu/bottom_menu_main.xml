@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/ic_stats"
+        android:title="@string/report" />
+
+    <item
+        android:id="@+id/items"
+        android:icon="@drawable/ic_items"
+        android:title="@string/items" />
+
+    <item
+        android:id="@+id/sell"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/sell" />
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more" />
+</menu>

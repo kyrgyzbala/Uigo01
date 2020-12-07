@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Uigo01</string>
+    <string name="report">Отчеты</string>
+    <string name="items">Товары</string>
+    <string name="sell">Продажа</string>
+    <string name="more">Ещё</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
