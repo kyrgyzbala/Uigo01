@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.login.RegisterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarRegister"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/arrBackRegister"
+                android:layout_width="52dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_arrback_dark" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/arrBackRegister"
+                app:title="@string/register" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarRegister">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userNameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent">
+
+                <EditText
+                    android:id="@+id/userNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/username"
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="12sp"
+                    android:textSize="18sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/userNameTextInput"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#03A9F4" />
+
+            <TextView
+                android:id="@+id/userNameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginStart="32dp"
+                android:text="@string/requiredField"
+                android:textColor="#F80F0F"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/storeNameTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent">
+
+                <EditText
+                    android:id="@+id/storeNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/storeName"
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="12sp"
+                    android:textSize="18sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/storeNameTextInput"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#03A9F4" />
+
+            <TextView
+                android:id="@+id/storeNameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="32dp"
+                android:text="@string/requiredField"
+                android:textColor="#F80F0F"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent">
+
+                <EditText
+                    android:id="@+id/addressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/address"
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="12sp"
+                    android:textSize="18sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/addressTextInput"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#03A9F4" />
+
+            <TextView
+                android:id="@+id/addressError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_marginStart="32dp"
+                android:text="@string/requiredField"
+                android:textColor="#F80F0F"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent">
+
+                <EditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/phoneNumber"
+                    android:inputType="phone"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="12sp"
+                    android:textSize="18sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/phoneTextInput"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#03A9F4" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInputRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view7"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordEditTextRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/passwordStar"
+                    android:inputType="textWebPassword"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/passwordTextInputRegister"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#3B73D0" />
+
+            <TextView
+                android:id="@+id/pwdError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:layout_marginStart="32sp"
+                android:layout_marginTop="2dp"
+                android:text="@string/requiredField"
+                android:textColor="#EA0808"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInputRegister2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="26sp"
+                android:background="@color/transparent"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordEditTextRegister2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_baseline_person"
+                    android:hint="@string/reenterPasswordStar"
+                    android:inputType="textWebPassword"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/passwordTextInputRegister2"
+                android:layout_marginStart="32sp"
+                android:layout_marginEnd="24dp"
+                android:background="#3B73D0" />
+
+            <TextView
+                android:id="@+id/password2Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view5"
+                android:layout_marginStart="32dp"
+                android:text="@string/requiredField"
+                android:textColor="#F80F0F"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+
+            <TextView
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@+id/view5"
+                android:layout_margin="32dp"
+                android:background="@drawable/back_button_blue"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/register"
+                android:textColor="@color/colorWhite"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/textViewHaveAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonRegister"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="@string/alreadyRegistered" />
+
+            <TextView
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewHaveAccount"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/login"
+                android:textColor="@color/colorPrimary" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#52FFFFFF"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

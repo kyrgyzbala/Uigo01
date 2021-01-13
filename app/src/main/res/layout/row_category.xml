@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16sp"
+        android:src="@drawable/ic_folder" />
+
+    <TextView
+        android:id="@+id/categoryNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/arrowImageView"
+        android:layout_toEndOf="@+id/logo"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/categoryname"
+        android:textColor="@color/textColorDarker"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/arrowImageView"
+        android:layout_width="22sp"
+        android:layout_height="22sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/colorPrimary" />
+
+</RelativeLayout>

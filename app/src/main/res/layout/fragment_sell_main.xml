@@ -1,14 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".ui.sell.SellMainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/sellView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:visibility="visible">
 
-</FrameLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#f3f3f4"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f3f3f4">
+
+                <TextView
+                    android:id="@+id/titleLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16sp"
+                    android:layout_toStartOf="@+id/typeUidButton"
+                    android:background="#f3f3f4"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/sell"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="21sp" />
+
+                <RelativeLayout
+                    android:id="@+id/typeUidButton"
+                    android:layout_width="52dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_barcode" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBar"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_cat_filter" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_below="@+id/recyclerViewFilter"
+            android:layout_marginTop="6dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="4"
+                    tools:listitem="@layout/row_items" />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/showHideItems"
+            android:layout_width="wrap_content"
+            android:layout_height="32sp"
+            android:layout_below="@+id/swipeRefresh"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/textViewHideShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/imgViewArrow"
+                android:text="@string/hideList"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/imgViewArrow"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arr_up" />
+
+        </RelativeLayout>
+
+        <SurfaceView
+            android:id="@+id/cameraSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/showHideItems"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_below="@+id/cameraSurfaceView"
+            android:layout_marginTop="-12dp"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/cameraSurfaceView"
+            android:background="#B0000000" />
+
+        <TextView
+            android:id="@+id/textViewResultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cameraSurfaceView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12sp"
+            android:text="@string/itemsCheckout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view1"
+            android:layout_below="@+id/textViewResultText"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_checkout" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/textViewTotalBuy"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewTotalBuy"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_above="@+id/buttonNext"
+            android:layout_marginStart="22sp"
+            android:layout_toStartOf="@+id/textViewTotalBuyFloat"
+            android:gravity="center_vertical"
+            android:text="@string/totalTrans"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewTotalBuyFloat"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_above="@+id/buttonNext"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22sp"
+            android:gravity="center"
+            android:text="@string/_0_c"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/buttonNext"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22sp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/textViewTotalBuyFloat"
+            android:background="@drawable/back_button_blue"
+            android:gravity="center"
+            android:text="@string/receipt"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/adminView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mustBeCashier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="@string/mustSignInAsCashier"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/buttonSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/mustBeCashier"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/back_button_blue"
+            android:gravity="center"
+            android:text="@string/quit"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#92FFFFFF"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

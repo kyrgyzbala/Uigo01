@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Uigo01"
+rootProject.name = "kassa01"

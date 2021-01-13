@@ -13,6 +13,9 @@
     <color name="colorAccent">#03A9F4</color>
     <color name="actionBarStatus">#f2f3f5</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="textColorDarker">#12202E</color>
 
     <color name="transparent">#00FFFFFF</color>
+
+    <color name="text">#290567</color>
 </resources>
