@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="n">
-        <activity android:name="kg.kyrgyzcoder.kassa01.data.network.sell.ReceiptActivity"></activity>
+        <activity android:name="kg.kyrgyzcoder.kassa01.data.network.sell.ReceiptActivity" />
         <activity android:name="kg.kyrgyzcoder.kassa01.ui.items.ItemEditActivity" />
         <activity android:name="kg.kyrgyzcoder.kassa01.ui.more.AddNewEmplActivity" />
         <activity android:name="kg.kyrgyzcoder.kassa01.ui.login.CashierLoginActivity" />

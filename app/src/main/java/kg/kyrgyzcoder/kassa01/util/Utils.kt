@@ -24,6 +24,10 @@ const val EXTRA_CATEGORY_ITEM = "EXTRA_CATEGORY_ITEM"
 const val EXTRA_ADD_TYPE = "EXTRA_ADD_TYPE"
 const val EXTRA_ITEM = "EXTRA_ITEM"
 const val EXTRA_RECEIPT = "EXTRA_RECEIPT"
+const val EXTRA_USER_ID = "EXTRA_USER_ID"
+const val EXTRA_ORDER_REF = "EXTRA_ORDER_REF"
+const val EXTRA_ORDER_MODEl = "EXTRA_ORDER_MODEl"
+const val EXTRA_ORDER_TYPE = "EXTRA_ORDER_TYPE"
 
 fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

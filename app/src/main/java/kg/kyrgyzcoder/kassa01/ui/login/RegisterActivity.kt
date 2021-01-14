@@ -14,7 +14,9 @@ import kg.kyrgyzcoder.kassa01.databinding.ActivityRegisterBinding
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginViewModel
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginViewModelFactory
 import kg.kyrgyzcoder.kassa01.ui.main.MainActivity
+import kg.kyrgyzcoder.kassa01.util.hide
 import kg.kyrgyzcoder.kassa01.util.hideKeyboard
+import kg.kyrgyzcoder.kassa01.util.show
 import kg.kyrgyzcoder.kassa01.util.toast
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware

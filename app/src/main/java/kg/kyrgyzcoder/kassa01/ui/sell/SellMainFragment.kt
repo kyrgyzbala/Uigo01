@@ -29,6 +29,7 @@ import kg.kyrgyzcoder.kassa01.data.network.item.model.ModelCategoryPag
 import kg.kyrgyzcoder.kassa01.data.network.sell.ReceiptActivity
 import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelPostTransaction
 import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelSellItem
+import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelTransactionResponse
 import kg.kyrgyzcoder.kassa01.databinding.FragmentSellMainBinding
 import kg.kyrgyzcoder.kassa01.ui.items.util.ItemListener
 import kg.kyrgyzcoder.kassa01.ui.items.util.ItemsRecyclerViewAdapter
@@ -114,7 +115,7 @@ class SellMainFragment : Fragment(), KodeinAware, ItemListener,
         itemViewModel.postNewTransAction(modelPostTransaction)
     }
 
-    override fun setReceiptSuccess(html: String) {
+    override fun setReceiptSuccess(modelTransactionResponse: ModelTransactionResponse) {
         codeList.clear()
         sellItemsList.clear()
         checkoutList.clear()
@@ -123,7 +124,7 @@ class SellMainFragment : Fragment(), KodeinAware, ItemListener,
         adapter?.notifyDataSetChanged()
         binding.progressBar.hide()
         val intent = Intent(requireContext(), ReceiptActivity::class.java)
-        intent.putExtra(EXTRA_RECEIPT, html)
+        intent.putExtra(EXTRA_RECEIPT, modelTransactionResponse.id)
         startActivity(intent)
     }
 

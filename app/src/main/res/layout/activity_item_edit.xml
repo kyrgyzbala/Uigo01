@@ -60,7 +60,6 @@
                 android:id="@+id/cardView"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_below="@+id/appBar"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="22dp"
                 app:cardCornerRadius="10dp"
@@ -73,30 +72,33 @@
 
             </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/itemCostTextInput"
+            <TextView
+                android:id="@+id/textViewCostText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardView"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="22dp"
-                android:layout_marginEnd="32dp">
+                android:text="@string/itemCost2"
+                android:textColor="@color/textColorDarker"
+                android:textSize="13sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/itemCostEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:background="@color/colorWhite"
-                    android:hint="@string/itemCost2"
-                    android:inputType="none" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/itemCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCostText"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/_0"
+                android:textSize="19sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:layout_below="@+id/itemCostTextInput"
+                android:layout_below="@+id/itemCostTextView"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginEnd="32dp"
                 android:background="@color/colorPrimary" />
 
@@ -104,7 +106,7 @@
                 android:id="@+id/addCostTextInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/itemCostTextInput"
+                android:layout_below="@+id/itemCostTextView"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="32dp">
@@ -114,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_plus"
                     android:hint="@string/addToCost"
                     android:inputType="numberDecimal"
                     android:text="@string/_0" />
@@ -142,9 +145,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_percentage"
                     android:hint="@string/addToCostPercent"
                     android:inputType="numberDecimal"
-                    android:maxLength="3"
+                    android:maxLength="5"
                     android:text="@string/_0" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -171,6 +175,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:background="@color/colorWhite"
+                    android:drawableEnd="@drawable/ic_som"
                     android:hint="@string/yourCost"
                     android:inputType="numberDecimal"
                     android:text="@string/_0" />

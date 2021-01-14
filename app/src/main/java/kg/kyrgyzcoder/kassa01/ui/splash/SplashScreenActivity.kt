@@ -9,12 +9,14 @@ import android.view.WindowManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
+import com.google.firebase.auth.FirebaseAuth
 import kg.kyrgyzcoder.kassa01.R
 import kg.kyrgyzcoder.kassa01.ui.login.CashierLoginActivity
 import kg.kyrgyzcoder.kassa01.ui.login.LoginActivity
 import kg.kyrgyzcoder.kassa01.ui.main.MainActivity
 import kg.kyrgyzcoder.kassa01.ui.splash.viewmodel.UserPreferencesViewModel
 import kg.kyrgyzcoder.kassa01.ui.splash.viewmodel.UserPreferencesViewModelFactory
+import kg.kyrgyzcoder.kassa01.util.toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -53,12 +55,30 @@ class SplashScreenActivity : AppCompatActivity(), KodeinAware {
         }
 
         GlobalScope.launch(Dispatchers.Main) {
-            delayFor()
+            val user = FirebaseAuth.getInstance().currentUser
+            if (user != null)
+                delayFor(1)
+            else
+                signIn()
+        }
+
+    }
+
+    private fun signIn() {
+        FirebaseAuth.getInstance().signInAnonymously().addOnCompleteListener {
+            if (it.isSuccessful) {
+                GlobalScope.launch(Dispatchers.Main) {
+                    delayFor(2)
+                }
+            } else {
+                toast("ERROR SIGN IN")
+            }
         }
     }
 
-    private suspend fun delayFor() {
-        delay(2000)
+    private suspend fun delayFor(code: Int) {
+        if (code == 1)
+            delay(2000)
         userPrefsViewModel.isUserFirstTime.asLiveData().observe(this, Observer { isLoggedIn ->
             if (isLoggedIn.isNullOrEmpty()) {
                 val intent = Intent(this, LoginActivity::class.java)

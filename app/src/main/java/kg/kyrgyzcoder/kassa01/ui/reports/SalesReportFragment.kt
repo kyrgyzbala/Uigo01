@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import kg.kyrgyzcoder.kassa01.data.model.ModelItem
 import kg.kyrgyzcoder.kassa01.databinding.FragmentSalesReportBinding
 import kg.kyrgyzcoder.kassa01.ui.reports.util.ItemIncomeRecyclerViewAdapter
+import kg.kyrgyzcoder.kassa01.util.hide
 
 
 class SalesReportFragment : Fragment() {

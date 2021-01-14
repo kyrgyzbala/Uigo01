@@ -13,7 +13,9 @@ import kg.kyrgyzcoder.kassa01.data.network.login.model.ModelLogin
 import kg.kyrgyzcoder.kassa01.databinding.ActivityLoginBinding
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginViewModel
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginViewModelFactory
+import kg.kyrgyzcoder.kassa01.util.hide
 import kg.kyrgyzcoder.kassa01.util.hideKeyboard
+import kg.kyrgyzcoder.kassa01.util.show
 import kg.kyrgyzcoder.kassa01.util.toast
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -96,6 +98,8 @@ class LoginActivity : AppCompatActivity(), KodeinAware, LoginListener {
                     binding.userNameError.visibility = View.GONE
                     if (binding.passwordEditText.text.toString().length >= 6) {
                         binding.buttonLogin.alpha = 1F
+                    } else {
+                        binding.buttonLogin.alpha = 0.4F
                     }
                 }
             }
@@ -114,6 +118,8 @@ class LoginActivity : AppCompatActivity(), KodeinAware, LoginListener {
                     val text = binding.userNameEditText.text.toString()
                     if (text.isNotEmpty()) {
                         binding.buttonLogin.alpha = 1F
+                    } else {
+                        binding.buttonLogin.alpha = 0.4F
                     }
                 }
             }

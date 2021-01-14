@@ -11,6 +11,7 @@ import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.ViewModelProvider
 import kg.kyrgyzcoder.kassa01.R
 import kg.kyrgyzcoder.kassa01.data.network.item.model.*
+import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelTransactionResponse
 import kg.kyrgyzcoder.kassa01.databinding.FragmentItemsMainBinding
 import kg.kyrgyzcoder.kassa01.ui.items.util.CategoriesRecyclerViewAdapter
 import kg.kyrgyzcoder.kassa01.ui.items.util.CustomAddCat
@@ -18,6 +19,8 @@ import kg.kyrgyzcoder.kassa01.ui.items.util.ItemListener
 import kg.kyrgyzcoder.kassa01.ui.items.viewmodel.ItemViewModel
 import kg.kyrgyzcoder.kassa01.ui.items.viewmodel.ItemViewModelFactory
 import kg.kyrgyzcoder.kassa01.util.EXTRA_CATEGORY_ITEM
+import kg.kyrgyzcoder.kassa01.util.hide
+import kg.kyrgyzcoder.kassa01.util.show
 import kg.kyrgyzcoder.kassa01.util.toast
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -43,7 +46,7 @@ class ItemsMainFragment : Fragment(), CustomAddCat.CustomAddCatListener, KodeinA
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentItemsMainBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -157,7 +160,7 @@ class ItemsMainFragment : Fragment(), CustomAddCat.CustomAddCatListener, KodeinA
     override fun adminSignedOut() {
     }
 
-    override fun setReceiptSuccess(html: String) {
+    override fun setReceiptSuccess(modelTransactionResponse: ModelTransactionResponse) {
 
     }
 

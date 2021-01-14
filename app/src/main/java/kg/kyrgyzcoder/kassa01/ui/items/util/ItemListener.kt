@@ -2,6 +2,7 @@ package kg.kyrgyzcoder.kassa01.ui.items.util
 
 import kg.kyrgyzcoder.kassa01.data.network.item.model.ModelActivePag
 import kg.kyrgyzcoder.kassa01.data.network.item.model.ModelCategoryPag
+import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelTransactionResponse
 
 interface ItemListener {
 
@@ -23,6 +24,6 @@ interface ItemListener {
     fun setUserType(userType: Int)
     fun adminSignedOut()
 
-    fun setReceiptSuccess(html: String)
+    fun setReceiptSuccess(modelTransactionResponse: ModelTransactionResponse)
     fun getReceiptFail(code: Int?)
 }

@@ -42,7 +42,6 @@ class ItemViewModel(
     }
 
     fun postNewTransAction(modelPostTransaction: ModelPostTransaction) = viewModelScope.launch {
-
         userPreferences.currentCashierId.collectLatest { cashierId ->
             modelPostTransaction.cashier = cashierId!!
             when (val response = itemRepository.postNewTransaction(modelPostTransaction)) {

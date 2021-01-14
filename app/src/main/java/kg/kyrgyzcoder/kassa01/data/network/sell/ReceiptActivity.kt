@@ -31,22 +31,25 @@ class ReceiptActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        val html = intent.getStringExtra(EXTRA_RECEIPT)
+        val html = intent.getIntExtra(EXTRA_RECEIPT, 0)
 
-        if (html != null){
+        if (html != 0) {
+            binding.webViewReceipt.settings.javaScriptEnabled = true
+            binding.webViewReceipt.settings.builtInZoomControls = true;
+            binding.webViewReceipt.settings.setSupportZoom(true);
+            binding.webViewReceipt.loadUrl("http://165.22.93.189/pyapps/venv/api/item/clientorder/$html")
+
             binding.webViewReceipt.webViewClient = object : WebViewClient() {
 
-                override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest) = false
+                override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest) =
+                    false
 
                 override fun onPageFinished(view: WebView, url: String) {
-                    Log.i("NURIKO", "page finished loading $url")
                     binding.buttonPrint.setOnClickListener {
                         createWebPrintJob(view)
                     }
                 }
             }
-            binding.webViewReceipt.settings.javaScriptEnabled = true
-            binding.webViewReceipt.loadData(html, "text/html; charset=utf-8", "UTF-8")
         }
 
     }

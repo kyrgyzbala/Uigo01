@@ -1,0 +1,100 @@
+{
+  "project_info": {
+    "project_number": "615940310561",
+    "project_id": "uigo-2ff4b",
+    "storage_bucket": "uigo-2ff4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615940310561:android:b7b2019ff5b95b4e234560",
+        "android_client_info": {
+          "package_name": "kg.kyrgyzcoder.kassa01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615940310561-v5pq71iigbcc5cb662q5ef8v3nl20db3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.kyrgyzcoder.kassa01",
+            "certificate_hash": "704d52e74f8229b078eb580f8d5678edae083338"
+          }
+        },
+        {
+          "client_id": "615940310561-98f47nvh0d68dsddel363gc253l6jf3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiSAVM7IVKLtXs13XSVqs8PnQ3bPLkWAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615940310561-98f47nvh0d68dsddel363gc253l6jf3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615940310561:android:479453fe489d7fc1234560",
+        "android_client_info": {
+          "package_name": "kg.kyrgyzcoder.uigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615940310561-1co201jdeusuurgr9f9vn1s79dqor64f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.kyrgyzcoder.uigo",
+            "certificate_hash": "704d52e74f8229b078eb580f8d5678edae083338"
+          }
+        },
+        {
+          "client_id": "615940310561-4vg11mmqugptvcqpkfti99p2ormsnqqj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.kyrgyzcoder.uigo",
+            "certificate_hash": "304eb2e9bd0a6b9915dd70c5550732289ca77d2c"
+          }
+        },
+        {
+          "client_id": "615940310561-9r15t04l9rfoatr5mm140tlqfd6mjcgo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.kyrgyzcoder.uigo",
+            "certificate_hash": "34061f82deeaa3056b6e2d1960363305da7cd49a"
+          }
+        },
+        {
+          "client_id": "615940310561-98f47nvh0d68dsddel363gc253l6jf3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiSAVM7IVKLtXs13XSVqs8PnQ3bPLkWAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615940310561-98f47nvh0d68dsddel363gc253l6jf3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

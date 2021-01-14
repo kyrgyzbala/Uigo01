@@ -9,6 +9,7 @@ import kg.kyrgyzcoder.kassa01.data.model.ModelItem
 import kg.kyrgyzcoder.kassa01.databinding.FragmentInRepostBinding
 import kg.kyrgyzcoder.kassa01.databinding.FragmentReportsMainBinding
 import kg.kyrgyzcoder.kassa01.ui.reports.util.ItemIncomeRecyclerViewAdapter
+import kg.kyrgyzcoder.kassa01.util.hide
 
 
 class InReportsFragment : Fragment() {

@@ -13,6 +13,7 @@ import kg.kyrgyzcoder.kassa01.data.network.login.response.ModelRegisterResponse
 import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelCloseDayResponse
 import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelDayFinish
 import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelPostTransaction
+import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelTransactionResponse
 import kg.kyrgyzcoder.kassa01.data.network.user.model.ModelCashLogin
 import kg.kyrgyzcoder.kassa01.data.network.user.model.ModelCashier
 import kg.kyrgyzcoder.kassa01.data.network.user.model.ModelCreateCashier
@@ -74,7 +75,7 @@ interface ApiService {
     @POST("api/item/clientorder/")
     suspend fun createNewTransactionAsync(
         @Body modelPostTransaction: ModelPostTransaction
-    ): String
+    ): ModelTransactionResponse
 
     @POST("api/store/sendcashierid/")
     suspend fun closeTheDay(@Body modelDayFinish: ModelDayFinish): ModelCloseDayResponse

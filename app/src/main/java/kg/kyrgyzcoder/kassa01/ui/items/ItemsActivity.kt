@@ -9,6 +9,7 @@ import android.view.View
 import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.ViewModelProvider
 import kg.kyrgyzcoder.kassa01.data.network.item.model.*
+import kg.kyrgyzcoder.kassa01.data.network.sell.model.ModelTransactionResponse
 import kg.kyrgyzcoder.kassa01.databinding.ActivityItemsBinding
 import kg.kyrgyzcoder.kassa01.ui.items.util.*
 import kg.kyrgyzcoder.kassa01.ui.items.viewmodel.ItemViewModel
@@ -149,7 +150,8 @@ class ItemsActivity : AppCompatActivity(), KodeinAware, CustomChooseAdd.CustomCh
 
     }
 
-    override fun setReceiptSuccess(html: String) {
+    override fun setReceiptSuccess(modelTransactionResponse: ModelTransactionResponse) {
+
     }
 
     override fun getReceiptFail(code: Int?) {

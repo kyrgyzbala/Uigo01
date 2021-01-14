@@ -118,5 +118,31 @@
     <string name="_0">0</string>
     <string name="yourCost">Цена для продаж:</string>
     <string name="save">Сохранить</string>
-
+    <string name="newOrders">Новые</string>
+    <string name="confirmedOrders">Подтвержденные</string>
+    <string name="paid">Оплачено</string>
+    <string name="forDelivery">Доставка</string>
+    <string name="forPickup">На вынос</string>
+    <string name="notRegisteredUser">Незарегистрированный</string>
+    <string name="orderType">Вид заказа</string>
+    <string name="paymentStatus">Статус оплаты:</string>
+    <string name="phoneNumber2">Номер телефона:</string>
+    <string name="clientAddress">Адрес:</string>
+    <string name="dash">-</string>
+    <string name="verify">Подтвердить</string>
+    <string name="callDelivery">Вызывать курьера</string>
+    <string name="cancel">Отказать</string>
+    <string name="confirmOrder">Подтвердить заказ?</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="cash">Наличными</string>
+    <string name="callUserAsk">Позвонить клиенту?</string>
+    <string name="call">Позвонить</string>
+    <string name="orderConfirmed">Заказ успешно принят</string>
+    <string name="addressAndPhoneNumber">Адрес и номер телефона</string>
+    <string name="ok">OK</string>
+    <string name="callForDel">Вызывать курьера?</string>
+    <string name="ofCourse">Конечно</string>
+    <string name="noNoNeed">Нет, пока не надо</string>
+    <string name="deliverySuccess">Заявка на курьера успешно отправлено!</string>
+    <string name="deliveryCallFail">Произошла ошибка! Пожалуйста повторите заново попозже!</string>
 </resources>

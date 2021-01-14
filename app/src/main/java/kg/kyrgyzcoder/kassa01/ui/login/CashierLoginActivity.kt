@@ -14,7 +14,9 @@ import kg.kyrgyzcoder.kassa01.databinding.ActivityCashierLoginBinding
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginCashierViewModel
 import kg.kyrgyzcoder.kassa01.ui.login.viewmodel.LoginCashierViewModelFactory
 import kg.kyrgyzcoder.kassa01.ui.main.MainActivity
+import kg.kyrgyzcoder.kassa01.util.hide
 import kg.kyrgyzcoder.kassa01.util.hideKeyboard
+import kg.kyrgyzcoder.kassa01.util.show
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.closestKodein
